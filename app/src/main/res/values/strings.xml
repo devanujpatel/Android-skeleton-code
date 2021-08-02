@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android-skeleton-code</string>
+    <string name="course_rating" />
+    <string name="course_name" />
 </resources>
