@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
-    app:cardBackgroundColor="#FEDBD0"
+    app:cardBackgroundColor="@color/primaryColor"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp"
     app:cardMaxElevation="10dp"
@@ -48,7 +48,7 @@
             android:layout_marginTop="10dp"
             android:layout_toEndOf="@id/idIVCourseImage"
             android:text="@string/course_name"
-            android:textColor="@color/black"
+            android:textColor="@color/primaryDarkColor"
             android:textSize="18sp"
             android:textStyle="bold" />
 
