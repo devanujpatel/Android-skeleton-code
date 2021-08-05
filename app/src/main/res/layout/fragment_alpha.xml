@@ -13,5 +13,6 @@
         android:layout_height="wrap_content"
         android:text="Alpha"
         android:textAlignment="gravity"
-        android:textSize="70dp"/>
+        android:textSize="70dp"
+        android:onClick="changeToBeta"/>
 </FrameLayout>

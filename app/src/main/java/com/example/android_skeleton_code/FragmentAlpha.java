@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
@@ -17,17 +18,23 @@ public class FragmentAlpha extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        container.findViewById(R.id.alpha_text_view).setOnClickListener(v -> onClick());
-
         // Inflate the layout for this fragment
 
-        return inflater.inflate(R.layout.fragment_alpha, container, false);
+        View view = inflater.inflate(R.layout.fragment_alpha, container, false);
 
+        TextView textView = view.findViewById(R.id.alpha_text_view);
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(getView()).navigate(R.id.go_to_beta, null);
+            }
+        });
+
+        return view;
 
     }
 
-    private void onClick() {
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager.findFragmentById(R.id.nav_host_fragment_container);
-        NavController navController = navHostFragment.getNavController();
+    public void changeToBeta(View v){
+        Navigation.findNavController(getView()).navigate(R.id.go_to_beta, null);
     }
 }
