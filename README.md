@@ -1,2 +1,2 @@
-# Android-skeleton-code
-Template for empty android project. Starting point for building on top.
+# Navigation
+This branch consists of a very basic example of android app navigation using the navigation graphs.
