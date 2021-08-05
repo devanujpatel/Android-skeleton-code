@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/home_nav">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/fragmentAlpha">
 
+    <fragment
+        android:id="@+id/fragmentAlpha"
+        android:name="com.example.android_skeleton_code.FragmentAlpha"
+        android:label="fragment_alpha"
+        tools:layout="@layout/fragment_alpha" >
+        <action
+            android:id="@+id/go_to_beta"
+            app:destination="@id/fragmentBeta" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentBeta"
+        android:name="com.example.android_skeleton_code.FragmentBeta"
+        android:label="fragment_beta"
+        tools:layout="@layout/fragment_beta" >
+        <action
+            android:id="@+id/go_to_alpha"
+            app:destination="@id/fragmentAlpha" />
+    </fragment>
 </navigation>
